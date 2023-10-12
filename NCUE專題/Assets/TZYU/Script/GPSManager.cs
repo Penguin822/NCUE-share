@@ -1,6 +1,5 @@
+﻿using System.Collections;
 using UnityEngine;
-using System.Collections;
-
 public enum LocationState{
 	Disabled,
 	TimedOut,
@@ -81,61 +80,49 @@ public class GPSManager : MonoBehaviour {
 		}
 	}
 
-	void OnGUI(){
-		Rect guiBoxRect = new Rect(40, 20, Screen.width-80, Screen.height-40);
-		
-		GUI.skin.box.fontSize = 32 * SCREEN_DENSITY;
-		GUI.Box (guiBoxRect, "GPS Demo");
-		
-		float buttonHeight = guiBoxRect.height / 7;
+void OnGUI(){
+    Rect guiBoxRect = new Rect(30, 30, Screen.width-60, Screen.height-60);
 
-		switch(state){
-			case LocationState.Enabled:
-				GUILayout.Label("latitude: "+latitude.ToString(),debugStyle,GUILayout.Width(Screen.width / 4));
-				GUILayout.Label("longitude: "+longitude.ToString(),debugStyle,GUILayout.Width(Screen.width / 4));
-				
-				Rect distanceTextRect = new Rect(guiBoxRect.x+40, guiBoxRect.y + guiBoxRect.height/3,
-			                                 	 guiBoxRect.width-80, buttonHeight);
-			
-				GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
-				GUI.skin.label.alignment = TextAnchor.UpperCenter;
-				GUI.Label(distanceTextRect, "Distance walked: "+distance.ToString()+"m");
-				
-				Rect coinsTextRect = new Rect(guiBoxRect.x+40, guiBoxRect.y + guiBoxRect.height*2/3,
-				                              guiBoxRect.width-80, buttonHeight);
-				
-				GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
-				GUI.skin.label.alignment = TextAnchor.UpperCenter;
-				GUI.Label(coinsTextRect, "Coins: "+coins.ToString()+"g");
-				break;
-			case LocationState.Disabled:
-				Rect disabledTextRect = new Rect(guiBoxRect.x+40, guiBoxRect.y + guiBoxRect.height/2,
-			                             		 guiBoxRect.width-80, buttonHeight*2);
-			
-				GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
-				GUI.skin.label.alignment = TextAnchor.UpperCenter;
-				GUI.Label(disabledTextRect, "GPS is disabled. GPS must be enabled\n" +
-					"in order to use this application.");
-				break;
-			case LocationState.Failed:
-				Rect failedTextRect = new Rect(guiBoxRect.x+40, guiBoxRect.y + guiBoxRect.height/2,
-			                                   guiBoxRect.width-80, buttonHeight*2);
-			
-				GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
-				GUI.skin.label.alignment = TextAnchor.UpperCenter;
-				GUI.Label(failedTextRect, "Failed to initialize location service.\n" +
-					"Try again later.");
-				break;
-			case LocationState.TimedOut:
-				Rect timeOutTextRect = new Rect(guiBoxRect.x+40, guiBoxRect.y + guiBoxRect.height/2,
-				                                 guiBoxRect.width-80, buttonHeight*2);
-				
-				GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
-				GUI.skin.label.alignment = TextAnchor.UpperCenter;
-				GUI.Label(timeOutTextRect, "Connection timed out. Try again later.");
-				break;
-		}
-	}
+    GUI.skin.box.fontSize = 32 * SCREEN_DENSITY;
+
+    float buttonHeight = guiBoxRect.height / 7;
+
+    switch(state){
+        case LocationState.Enabled:
+            Rect distanceTextRect = new Rect(guiBoxRect.x + 30, guiBoxRect.y + 30, guiBoxRect.width - 60, buttonHeight);
+
+            //GUI.skin.label.fontSize = 32 * SCREEN_DENSITY;
+            //GUI.skin.label.alignment = TextAnchor.UpperLeft;
+            //GUI.Label(distanceTextRect, "latitude: " + latitude.ToString() + "\nlongitude: " + longitude.ToString() + "\nDistance walked: " + distance.ToString() + "m");
+            break;
+
+        case LocationState.Disabled:
+            Rect disabledTextRect = new Rect(guiBoxRect.x + 30, guiBoxRect.y + guiBoxRect.height / 2,guiBoxRect.width - 60, buttonHeight * 2);
+
+            //GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
+            //GUI.skin.label.alignment = TextAnchor.UpperLeft;
+            break;
+
+        case LocationState.Failed:
+            Rect failedTextRect = new Rect(guiBoxRect.x + 30, guiBoxRect.y + guiBoxRect.height / 2,guiBoxRect.width - 60, buttonHeight * 2);
+
+            //GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
+            //GUI.skin.label.alignment = TextAnchor.UpperLeft;
+            //GUI.Label(failedTextRect, "Failed to initialize location service.\n" +"Try again later.");
+            break;
+
+        case LocationState.TimedOut:
+            Rect timeOutTextRect = new Rect(guiBoxRect.x + 30, guiBoxRect.y + guiBoxRect.height / 2,guiBoxRect.width - 60, buttonHeight * 2);
+
+            //GUI.skin.label.fontSize = 40 * SCREEN_DENSITY;
+            //GUI.skin.label.alignment = TextAnchor.UpperLeft;
+            //GUI.Label(timeOutTextRect, "Connection timed out. Try again later.");
+            break;
+    }
+}
+
+
+
 
 	// The Haversine formula
 	// Veness, C. (2014). Calculate distance, bearing and more between

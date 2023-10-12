@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public int m_seconds;                 //计璸竒传衡羆计
+    public int m_seconds;          //计璸竒传衡羆计
     public int m_min;              //ノ砞﹚计璸だ牧
     public int m_sec;              //ノ砞﹚计璸计
 
@@ -15,11 +15,13 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Countdown());   //㊣计璸祘
+      StartCoroutine(Countdown());   //㊣计璸祘
+
     }
 
-    IEnumerator Countdown()
+    IEnumerator   Countdown()
     {
+        yield return new WaitForSeconds(3); 
         m_timer.text = string.Format("{0}:{1}", m_min.ToString("00"), m_sec.ToString("00"));
         m_seconds = (m_min * 60) + m_sec;       //盢丁传衡计
 

@@ -24,16 +24,16 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/TZYU/Scenes/Dog_Defult.unity
+    path: Assets/TZYU/Scenes2/Dog_Defult.unity
     guid: 6b860c15f7ed8574c9d2c7fd9ec45073
   - enabled: 1
-    path: Assets/TZYU/Scenes/Dog_Lose.unity
+    path: Assets/TZYU/Scenes2/Dog_Lose.unity
     guid: be5729ac34ee6f74fb4a784b44b64e08
   - enabled: 1
-    path: Assets/TZYU/Scenes/Dog_Main.unity
+    path: Assets/TZYU/Scenes2/Dog_Main.unity
     guid: 7100dd13cc163964981ec0de68fe80e9
   - enabled: 1
-    path: Assets/TZYU/Scenes/Dog_Win.unity
+    path: Assets/TZYU/Scenes2/Dog_Win.unity
     guid: 99e8a860f8365ff4b8ebd5ba7420456f
   - enabled: 1
     path: Assets/YILING/Scenes_ui/2_Community.unity

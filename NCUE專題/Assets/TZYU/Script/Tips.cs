@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tips : MonoBehaviour
 {
     public GameObject Tip;
-    private float time = 2.0f;
+    private float time = 6.0f;
 
     void Start()
     {

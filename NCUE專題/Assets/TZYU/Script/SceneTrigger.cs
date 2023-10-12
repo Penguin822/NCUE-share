@@ -1,17 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class SceneTrigger : MonoBehaviour
 {
-    public string sceneName;
+    private Animator run;
+    public Vector3 rotationSpeed = new Vector3(0, 45, 0); // æ—‹è½‰çš„é€Ÿåº¦
 
-    public void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Ä²µo¸I¼²¨Æ¥ó");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Dog_Win");
-        }
+        transform.rotation *= Quaternion.Euler(rotationSpeed * Time.deltaTime);
     }
 }

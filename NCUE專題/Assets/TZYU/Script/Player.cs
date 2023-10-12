@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
-    public string sceneName; // 目標場景的名稱
+    public GameObject buttonToActivate;
+    public AudioClip collisionSound;
+    public GameObject dog;
+    private Animator run;
+    static public bool coll = false;
 
-    private void OnCollisionEnter(Collision collision)
+    public void Start()
     {
-        // 檢查碰撞的物體是否是你想要的目標物體
-        if (collision.gameObject.CompareTag("bone"))
+        run = dog.GetComponent<Animator>(); 
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name.Contains("bone"))
         {
-            // 切換到目標場景
-            SceneManager.LoadScene("Dog_Win");
+            coll = true;
+            Debug.Log("觸發碰撞範圍");
+            buttonToActivate.SetActive(true);
+            run.SetBool("IsMoving", false);
+            AudioSource.PlayClipAtPoint(collisionSound, transform.position);
         }
     }
+  
 }
