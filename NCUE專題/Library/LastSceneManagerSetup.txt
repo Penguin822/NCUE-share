@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/YUYING/scene/CameraToPlayGame.unity
+=======
 - path: Assets/RUFEN/Samples/OpenAI Unity/0.1.15/Text Completion Chat/chat.unity
+>>>>>>> parent of 2826e5d1 (Cat)
   isLoaded: 1
   isActive: 1
   isSubScene: 0

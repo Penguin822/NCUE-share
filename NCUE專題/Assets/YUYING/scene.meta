@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 31ec0e226d76d0342b7a2d361c25fe06
+=======
 guid: aabe9dabf2b179b4eabfaec90c6d824b
+>>>>>>> parent of 2826e5d1 (Cat)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

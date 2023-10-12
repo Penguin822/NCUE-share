@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1536
     height: 868.8
   m_ShowMode: 4
+<<<<<<< HEAD
+  m_Title: Game
+=======
   m_Title: Hierarchy
+>>>>>>> parent of 2826e5d1 (Cat)
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
@@ -117,12 +121,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
+    width: 1280
+    height: 627.3333
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
+  vertical: 0
+  controlID: 19
+=======
     width: 1536
     height: 818.8
   m_MinSize: {x: 707, y: 471}
   m_MaxSize: {x: 18002, y: 14021}
   vertical: 0
   controlID: 8006
+>>>>>>> parent of 2826e5d1 (Cat)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,12 +155,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 954.6667
+    height: 627.3333
+  m_MinSize: {x: 433, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
+  vertical: 1
+  controlID: 111
+=======
     width: 1145.6
     height: 818.8
   m_MinSize: {x: 431, y: 471}
   m_MaxSize: {x: 14001, y: 14021}
   vertical: 1
   controlID: 8007
+>>>>>>> parent of 2826e5d1 (Cat)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +194,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 54
+=======
   controlID: 8008
+>>>>>>> parent of 2826e5d1 (Cat)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,6 +272,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 220.66667
+    width: 954.6667
+    height: 406.66663
+  m_MinSize: {x: 433, y: 271}
+  m_MaxSize: {x: 14003, y: 10021}
+  vertical: 0
+  controlID: 112
+=======
     y: 318.4
     width: 1145.6
     height: 500.4
@@ -253,6 +288,7 @@ MonoBehaviour:
   m_MaxSize: {x: 14001, y: 10000}
   vertical: 0
   controlID: 7942
+>>>>>>> parent of 2826e5d1 (Cat)
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +306,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 375.33334
+    height: 406.66663
+=======
     width: 582.4
     height: 500.4
+>>>>>>> parent of 2826e5d1 (Cat)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
@@ -417,8 +458,13 @@ MonoBehaviour:
       width: 3452.1099
       height: 1536
     m_MinimalGUI: 1
+<<<<<<< HEAD
+  m_defaultScale: 0.15598959
+  m_LastWindowPixelSize: {x: 776.00006, y: 299.5}
+=======
   m_defaultScale: 0.17994791
   m_LastWindowPixelSize: {x: 776.49994, y: 371.75}
+>>>>>>> parent of 2826e5d1 (Cat)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -462,7 +508,11 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 340.2175, y: 780.4143, z: -332.32373}
     speed: 2
+<<<<<<< HEAD
+    m_Value: {x: 677.4186, y: 942.6635, z: 0}
+=======
     m_Value: {x: 340.2175, y: 780.4143, z: -332.32373}
+>>>>>>> parent of 2826e5d1 (Cat)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -515,7 +565,11 @@ MonoBehaviour:
   m_Size:
     m_Target: 1222.0598
     speed: 2
+<<<<<<< HEAD
+    m_Value: 813.78723
+=======
     m_Value: 1222.0598
+>>>>>>> parent of 2826e5d1 (Cat)
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -690,9 +744,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 5a710000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 06d3feff20d3feff4009ffff1e1cfffffa34ffffd847ffff2c48ffff8463ffffd863ffff249affff7eacffff90bfffff08c0fffff2d2ffff46d3ffffeee6ffffcc8c0000f88c0000048d00002a8d0000668d0000868d0000908d0000ba8d0000fc8d0000408e0000ae920000ca920000f2920000fc9200003a93000058930000629300007893000094930000b693000002940000429400004c940000
+=======
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: b680ffffba86ffffa291ffff9696ffff509effffba9fffff30bdffff88d6ffff06a5000022a500003ca50000
+>>>>>>> parent of 2826e5d1 (Cat)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -805,7 +865,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+    - Assets/StepbyStep
+=======
     - Assets/RUFEN/Samples/OpenAI Unity/0.1.15/Text Completion Chat
+>>>>>>> parent of 2826e5d1 (Cat)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -819,7 +883,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 145c0000
     m_LastClickedID: 23572
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000a0700000a2700000a4700000a6700000a8700000aa700000ac700000ae700000b0700000b2700000b4700000b6700000b8700000ba700000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000ce700000d0700000d2700000d4700000d6700000d8700000da700000dc700000de700000e0700000e2700000e4700000e6700000e8700000ea700000ec700000
+=======
     m_ExpandedIDs: ffffffff0000000002a4000004a4000006a4000008a400000aa400000ca400000ea4000012a4000014a4000016a4000018a400001aa400001ca400001ea4000020a4000022a4000024a4000026a4000028a400002aa400002ca400002ea4000030a4000056a4000060a400006aa4000088a9000082ad000084ad000086ad000088ad000016b90000
+>>>>>>> parent of 2826e5d1 (Cat)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -844,24 +912,31 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff00000000a0700000a2700000a4700000a6700000a8700000aa700000ac700000ae700000b0700000b2700000b4700000b6700000b8700000ba700000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000d2700000d4700000d6700000d8700000da700000dc700000de700000e4700000e6700000e8700000ea700000ec700000627100001c720000
+=======
     scrollPos: {x: 0, y: 634.6}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff0000000002a4000004a4000006a4000008a400000aa400000ca400000ea4000012a4000014a4000016a4000018a400001aa400001ca400001ea4000020a4000022a4000024a4000026a4000028a400002aa400002ca400002ea4000030a4000056a4000060a400006aa4000088a9000082ad000084ad000086ad000088ad000016b90000
+>>>>>>> parent of 2826e5d1 (Cat)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: CameraToPlayGame
+      m_OriginalName: CameraToPlayGame
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 29280
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
