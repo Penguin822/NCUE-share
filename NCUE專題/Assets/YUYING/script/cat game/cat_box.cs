@@ -5,14 +5,12 @@ using static UnityEngine.GraphicsBuffer;
 
 public class cat_box : MonoBehaviour
 {
-    public GameObject canvas;
     public GameObject cube;
     public GameObject cubeManager;
     public GameObject fish;
     public GameObject box;
     public List<GameObject> waypoints;
     private Animator animator;
-    public float speed = 2;
     int index = 0;
     int round = 0;
 
@@ -20,7 +18,7 @@ public class cat_box : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetBool("close", false);
+        animator.SetBool("close", true);
 
         //canvas.SetActive(false);
     }
@@ -28,18 +26,18 @@ public class cat_box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("close", true);
-
-        Vector3 fishDes = new Vector3(box.transform.position.x, (float)(box.transform.position.y + 0.7), box.transform.position.z);
-        fish.transform.position = Vector3.MoveTowards(fish.transform.position, fishDes, 2f * Time.deltaTime);
+        Vector3 fishDes = new Vector3(box.transform.position.x, (float)(box.transform.position.y + 0.8), box.transform.position.z);
+        fish.transform.position = Vector3.MoveTowards(fish.transform.position, fishDes, 1f * Time.deltaTime);
 
         Vector3 destination = waypoints[index].transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].transform.position, speed * Time.deltaTime);
+        
 
         float distance = Vector3.Distance(transform.position, destination);
 
-        if (round < 3 && fish.transform.position.y == -2.5)
+        if (round <= 3 && fish.transform.position.y == -2.4f)
         {
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[index].transform.position, 2f * Time.deltaTime);
+
             if (distance <= 0.05)
             {
                 if (cat_randomValue.random[round] < 0.5)
@@ -70,10 +68,10 @@ public class cat_box : MonoBehaviour
         }
 
         //Cube¥X²{
-        if (round == 3 && distance == 0)
+        if (round == 4)
         {
-            cube.SetActive(true);
-            cubeManager.SetActive(true);
+             cube.SetActive(true);
+             cubeManager.SetActive(true);           
         }
     }
 }

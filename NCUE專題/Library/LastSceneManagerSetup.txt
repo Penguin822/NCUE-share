@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TZYU/Scenes/Dog_Main.unity
+- path: Assets/YUYING/scene/cat_game_intro.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
