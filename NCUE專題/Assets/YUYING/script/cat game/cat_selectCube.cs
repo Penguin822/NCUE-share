@@ -102,7 +102,7 @@ public class cat_selectCube : MonoBehaviour
                 //確認選擇的箱子中是否有魚
                 if (selection.gameObject.name == "Cube")
                 {
-                    
+                    animatorCat.SetBool("lost", false);
                     animatorCat.SetBool("win", true);
                     animatorBox.SetBool("open", true);                   
                     audioSourceWin.Play();
@@ -146,7 +146,7 @@ public class cat_selectCube : MonoBehaviour
 
         if(correct == 1)
         {
-            Vector3 fishDes = new Vector3(0, 4.2f, -2);
+            Vector3 fishDes = new Vector3(-0.12f, 2, 7.9f);
             fish.transform.position = Vector3.MoveTowards(fish.transform.position, fishDes, 6 * Time.deltaTime);
         }
     }
@@ -169,11 +169,13 @@ public class cat_selectCube : MonoBehaviour
     }
     private IEnumerator DeleteScriptAfterDelay(float delay)
     {
+        
         yield return new WaitForSeconds(delay);
+
+        cat_canvasChooseBox.boxMovingEnd = true;
 
         Destroy(box.GetComponent<cat_box>());
         Destroy(box1.GetComponent<cat_box>());
-        Destroy(box2.GetComponent<cat_box>());
-
+        Destroy(box2.GetComponent<cat_box>());       
     }
 }
