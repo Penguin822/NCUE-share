@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject leavePanel;
+    public GameObject canvasBG;
+
+    private static GameManager instance;
+
 
     void Start()
     {
@@ -31,9 +35,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnleaveButtontClick()
-    {       
+    {     
+        PauseGame();  
         leavePanel.SetActive(true);
-        PauseGame();
     }
 
     public void OnconfirmButtonClick()
@@ -43,16 +47,15 @@ public class GameManager : MonoBehaviour
 
     public void OncancelButtonClick()
     {
-        leavePanel.SetActive(false);
         ResumeGame();
+        leavePanel.SetActive(false);
     }
 
     public void OnMapButtontClick()
     {      
-        PlayerPrefs.SetString("PreviousScene", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("B_map");
+        PauseGame();
+        SceneManager.LoadScene("B_game Map");
     }
-
 }
 
 

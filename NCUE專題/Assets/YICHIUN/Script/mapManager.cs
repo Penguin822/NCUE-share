@@ -10,9 +10,10 @@ public class mapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         string previousScene = PlayerPrefs.GetString("PreviousScene");
 
-        if(previousScene == "B_setup")
+        if(previousScene == "B_home")
         {
             confirmButton.gameObject.SetActive(true);
         }
@@ -30,12 +31,7 @@ public class mapManager : MonoBehaviour
 
     public void OnreturnButtonClick()
     {
-        string previousScene = PlayerPrefs.GetString("PreviousScene");
-
-        if(!string.IsNullOrEmpty(previousScene))
-        {
-            SceneManager.LoadScene(previousScene);
-        }        
+        SceneManager.LoadScene("B_game");
     }
 
     public void OnconfirmButtonClick()

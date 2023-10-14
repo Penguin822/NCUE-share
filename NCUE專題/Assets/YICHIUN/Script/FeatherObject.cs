@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Mapbox.Utils;
 
 public class FeatherObject : MonoBehaviour
 {
-    
     public Text feathercounter;
     private int counter = 0;
     public GameObject getfeatherPanel;
@@ -14,7 +15,6 @@ public class FeatherObject : MonoBehaviour
     void Start()
     {
         getfeatherPanel.SetActive(false);
-        StartCoroutine(ShowPanelForSeconds(3f));
     }
 
     private void UpdateCounter()
@@ -22,7 +22,7 @@ public class FeatherObject : MonoBehaviour
         counter++;
         feathercounter.text = counter.ToString();
 
-        if(counter == 10)
+        if (counter == 10)
         {
             SceneManager.LoadScene("B_win");
         }
@@ -30,11 +30,10 @@ public class FeatherObject : MonoBehaviour
 
     private void Update()
     {
-        getfeatherPanel.SetActive(false);
-
+        
         if (Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0); // 假設只處理第一個觸控點
+            Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
             {
@@ -43,23 +42,31 @@ public class FeatherObject : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject == gameObject)
+                    if (hit.collider.CompareTag("GameFeather"))
                     {
-                        getfeatherPanel.SetActive(true);
-                        Destroy(gameObject);
+                        // 销毁被点击的Feather物体
+                        Destroy(hit.collider.gameObject);
+                        // 更新计数器
                         UpdateCounter();
+
+                        OnDestory();
                     }
                 }
             }
         }
     }
 
-    private IEnumerator ShowPanelForSeconds(float seconds)
+    private void OnDestory()
     {
         getfeatherPanel.SetActive(true);
-        yield return new WaitForSeconds(seconds);
-        getfeatherPanel.SetActive(false);
+        StartCoroutine(ShowPanelForSeconds(1.5f));
     }
 
+
+    private IEnumerator ShowPanelForSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        getfeatherPanel.SetActive(false); 
+    }
 
 }
