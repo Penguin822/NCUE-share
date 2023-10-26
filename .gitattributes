@@ -1,2 +1,4 @@
 NCUE專題 filter=lfs diff=lfs merge=lfs -text
 desktop.ini filter=lfs diff=lfs merge=lfs -text
+*.bundle filter=lfs diff=lfs merge=lfs -text
+NCUE專題/Assets/Firebase/Plugins/x86_64/FirebaseCppApp-11_5_0.bundle filter=lfs diff=lfs merge=lfs -text
